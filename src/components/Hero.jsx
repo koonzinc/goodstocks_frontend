@@ -29,7 +29,7 @@ const Hero = () => {
           </svg>
         </a>
         <h1 class="mb-4 text-4xl font-extrabold tracking-tight leading-none text-gray-900 md:text-5xl lg:text-6xl">
-          We invest in the world's potential
+          You've come to the right place
         </h1>
         <p class="mb-8 text-lg font-normal text-gray-500 lg:text-xl sm:px-16 xl:px-48 ">
           Here at Goodstocks we focus on 5 stocks. Not because they are the best, but because we can't afford the paid plan for our API.
