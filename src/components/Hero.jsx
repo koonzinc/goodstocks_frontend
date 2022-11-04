@@ -13,7 +13,7 @@ const Hero = () => {
             New
           </span>{" "}
           <span class="text-sm font-medium">
-            Goodstocks has arrived! See what's new
+            Goodstocks has arrived! Get started now
           </span>
           <svg
             class="ml-2 w-5 h-5"
@@ -32,7 +32,7 @@ const Hero = () => {
           You've come to the right place
         </h1>
         <p class="mb-8 text-lg font-normal text-gray-500 lg:text-xl sm:px-16 xl:px-48 ">
-          Here at Goodstocks we focus on 5 stocks. Not because they are the best, but because we can't afford the paid plan for our API.
+          Here at Goodstocks we focus on 5 stocks. Not because they are the best, but because they are good. We also can't afford the paid plan for our API.
         </p>
         <div class="flex flex-col mb-8 lg:mb-16 space-y-4 sm:flex-row sm:justify-center sm:space-y-0 sm:space-x-4">
           <a
