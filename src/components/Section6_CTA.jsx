@@ -6,13 +6,12 @@ const Section6_CTA = () => {
       <div class="py-8 px-4 mx-auto max-w-[70%] bg-white rounded-lg shadow-2xl mb-20 sm:py-16 lg:px-6">
         <div class="max-w-screen-md">
           <h2 class="mb-4 text-4xl tracking-tight font-extrabold text-gray-900 ">
-            Let's find more that brings us together.
+            Let's look at some good stocks.
           </h2>
           <p class="mb-8 font-light text-gray-500 sm:text-xl ">
-            Flowbite helps you connect with friends, family and communities of
-            people who share your interests. Connecting with your friends and
-            family as well as discovering new ones is easy with features like
-            Groups, Watch and Marketplace.
+            Goodstocks allows you to connect with other likeminded investors &
+            share your thoughts about potential movements in the market.
+            Connecting with other is as easy as creating an account and posting your first thought!
           </p>
           <div class="flex flex-col space-y-4 sm:flex-row sm:space-y-0 sm:space-x-4">
             <a

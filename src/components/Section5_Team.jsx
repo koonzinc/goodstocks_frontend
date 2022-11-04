@@ -9,8 +9,8 @@ const Section5_Team = () => {
             Our Team
           </h2>
           <p class="font-light text-gray-500 lg:mb-16 sm:text-xl ">
-            Explore the whole collection of open-source web components and
-            elements built with the utility classes from Tailwind
+            Meet the team that put together this extensive application from
+            initial concept all the way to the production build.
           </p>
         </div>
         <div class="grid gap-8 mb-6 lg:mb-16 md:grid-cols-2">
@@ -176,7 +176,6 @@ const Section5_Team = () => {
               </ul>
             </div>
           </div>
-         
         </div>
       </div>
     </section>

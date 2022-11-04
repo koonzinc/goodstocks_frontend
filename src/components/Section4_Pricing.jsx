@@ -6,11 +6,12 @@ const Section4_Pricing = () => {
       <div class="py-8 px-4 mx-auto max-w-screen-xl lg:py-16 lg:px-6">
         <div class="mx-auto max-w-screen-md text-center mb-8 lg:mb-12">
           <h2 class="mb-4 text-4xl tracking-tight font-extrabold text-gray-900 ">
-            Designed for business teams like yours
+            Designed for a very particular investor
           </h2>
           <p class="mb-5 font-light text-gray-500 sm:text-xl ">
-            Here at Flowbite we focus on markets where technology, innovation,
-            and capital can unlock long-term value and drive economic growth.
+            Have you been scowering the internet in search for a website that
+            only displays 5 stocks with limited data? Look no further,
+            goodstocks is what you need.
           </p>
         </div>
         <div class="space-y-8 lg:grid lg:grid-cols-1 sm:gap-6 xl:gap-10 lg:space-y-0">
@@ -18,11 +19,10 @@ const Section4_Pricing = () => {
           <div class="flex flex-col p-6 mx-auto max-w-lg text-center text-gray-900 bg-white rounded-lg border border-gray-100 shadow ">
             <h3 class="mb-4 text-2xl font-semibold">Starter</h3>
             <p class="font-light text-gray-500 sm:text-lg ">
-              Best option for personal use & for your next project.
+              Best option for personal use for your next investment.
             </p>
             <div class="flex justify-center items-baseline my-8">
-              <span class="mr-2 text-5xl font-extrabold">$29</span>
-              <span class="text-gray-500 ">/month</span>
+              <span class="mr-2 text-5xl font-extrabold">Free</span>
             </div>
             {/* <!-- List --> */}
             <ul role="list" class="mb-8 space-y-4 text-left">
@@ -40,7 +40,7 @@ const Section4_Pricing = () => {
                     clip-rule="evenodd"
                   ></path>
                 </svg>
-                <span>Individual configuration</span>
+                <span>Your own profile</span>
               </li>
               <li class="flex items-center space-x-3">
                 {/* <!-- Icon --> */}
@@ -73,7 +73,7 @@ const Section4_Pricing = () => {
                   ></path>
                 </svg>
                 <span>
-                  Team size: <span class="font-semibold">1 developer</span>
+                  Team size: <span class="font-semibold">1 user</span>
                 </span>
               </li>
               <li class="flex items-center space-x-3">
@@ -91,7 +91,7 @@ const Section4_Pricing = () => {
                   ></path>
                 </svg>
                 <span>
-                  Premium support: <span class="font-semibold">6 months</span>
+                  Premium support: <span class="font-semibold">Forever</span>
                 </span>
               </li>
               <li class="flex items-center space-x-3">
@@ -109,7 +109,7 @@ const Section4_Pricing = () => {
                   ></path>
                 </svg>
                 <span>
-                  Free updates: <span class="font-semibold">6 months</span>
+                  Free updates: <span class="font-semibold">Never</span>
                 </span>
               </li>
             </ul>
