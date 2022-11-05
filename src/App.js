@@ -8,21 +8,21 @@ import Section4_Pricing from "./components/Section4_Pricing";
 import Section5_Team from "./components/Section5_Team";
 import Section6_CTA from "./components/Section6_CTA";
 import SocialProof from "./components/SocialProof";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import FrontPage from "./pages/FrontPage";
+import AppHome from './pages/AppHome';
+
 
 
 function App() {
   return (
     <div>
-      <Navbar />
-      <Hero />
-      <SocialProof />
-      <Section1_CTA />
-      <Section2_Features />
-      <Section3_Testimonial />
-      <Section4_Pricing />
-      <Section5_Team />
-      <Section6_CTA />
-      <Footer />
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<FrontPage />} />
+          <Route path="/app-home" element={<AppHome />} />
+        </Routes>
+      </BrowserRouter>
     </div>
   );
 }
