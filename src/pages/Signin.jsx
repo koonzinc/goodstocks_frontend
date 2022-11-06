@@ -1,22 +1,18 @@
 import React from "react";
-import AppNavbar from "../components/AppNavbar";
+import Navbar from "../components/Navbar";
+import { Link } from "react-router-dom";
 
 const AppLogin = () => {
   return (
     <>
-      <AppNavbar />
+      <Navbar />
       <section class="bg-gray-50 ">
         <div class="flex flex-col items-center justify-center px-6 py-8 mx-auto md:h-screen lg:py-0">
           <a
             href="#"
-            class="flex items-center mb-6 text-2xl font-semibold text-gray-900 "
+            className="flex items-center mb-6 text-2xl font-semibold text-[#2752ff] "
           >
-            <img
-              class="w-8 h-8 mr-2"
-              src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/logo.svg"
-              alt="logo"
-            />
-            Flowbite
+            goodstocks
           </a>
           <div class="w-full bg-white rounded-lg shadow dark:border md:mt-0 sm:max-w-md xl:p-0 ">
             <div class="p-6 space-y-4 md:space-y-6 sm:p-8">
@@ -41,12 +37,14 @@ const AppLogin = () => {
                   />
                 </div>
                 <div>
-                  <label
-                    for="password"
-                    class="block mb-2 text-sm font-medium text-gray-900 "
-                  >
-                    Password
-                  </label>
+                
+                    <label
+                      for="password"
+                      class="block mb-2 text-sm font-medium text-gray-900 "
+                    >
+                      Password
+                    </label>
+   
                   <input
                     type="password"
                     name="password"
@@ -73,12 +71,14 @@ const AppLogin = () => {
                       </label>
                     </div>
                   </div>
+                  <Link to="/forgot-password" replace>
                   <a
                     href="#"
                     class="text-sm font-medium text-primary-600 hover:underline "
                   >
                     Forgot password?
                   </a>
+                  </Link>
                 </div>
                 <button
                   type="submit"
@@ -90,7 +90,7 @@ const AppLogin = () => {
                   Don't have an account yet?{" "}
                   <a
                     href="#"
-                    class="font-medium text-primary-600 hover:underline "
+                    className="font-medium text-primary-600 hover:underline text-[#2752ff]"
                   >
                     Sign up
                   </a>

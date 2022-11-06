@@ -1,5 +1,6 @@
 import React from "react";
 import MenuSharpIcon from "@mui/icons-material/MenuSharp";
+import { Link } from "react-router-dom";
 
 const Navbar = () => {
   return (
@@ -12,18 +13,22 @@ const Navbar = () => {
             </span>
           </a>
           <div className="flex items-center lg:order-2">
-            <a
-              href="#"
-              className="text-gray-800  hover:bg-gray-50 focus:ring-4 focus:ring-gray-300 font-medium rounded-lg text-sm px-4 lg:px-5 py-2 lg:py-2.5 mr-2  focus:outline-none "
-            >
-              Sign in
-            </a>
-            <a
-              href="#"
-              className="text-white bg-[#2752FF] hover:bg-primary-800 focus:ring-4 focus:ring-primary-300 font-medium rounded-lg text-sm px-4 lg:px-5 py-2 lg:py-2.5 mr-2 focus:outline-none "
-            >
-              Sign up
-            </a>
+            <Link to="/signin" replace>
+              <a
+                href="#"
+                className="text-gray-800  hover:bg-gray-50 focus:ring-4 focus:ring-gray-300 font-medium rounded-lg text-sm px-4 lg:px-5 py-2 lg:py-2.5 mr-2  focus:outline-none "
+              >
+                Sign in
+              </a>
+            </Link>
+            <Link to="/signup" replace>
+              <a
+                href="#"
+                className="text-white bg-[#2752FF] hover:bg-primary-800 focus:ring-4 focus:ring-primary-300 font-medium rounded-lg text-sm px-4 lg:px-5 py-2 lg:py-2.5 mr-2 focus:outline-none "
+              >
+                Sign up
+              </a>
+            </Link>
             <button
               data-collapse-toggle="mobile-menu-2"
               type="button"
@@ -104,7 +109,6 @@ const Navbar = () => {
                   Team
                 </a>
               </li>
-              
             </ul>
           </div>
         </div>

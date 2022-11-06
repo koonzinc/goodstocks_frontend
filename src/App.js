@@ -11,7 +11,9 @@ import SocialProof from "./components/SocialProof";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import FrontPage from "./pages/FrontPage";
 import AppHome from './pages/AppHome';
-import AppLogin from "./pages/AppLogin";
+import Signin from "./pages/Signin";
+import Signup from "./pages/Signup";
+import ForgotPassword from "./pages/ForgotPassword";
 
 
 
@@ -22,7 +24,9 @@ function App() {
         <Routes>
           <Route path="/" element={<FrontPage />} />
           <Route path="/app-home" element={<AppHome />} />
-          <Route path="/app-login" element={<AppLogin />} />
+          <Route path="/signin" element={<Signin />} />
+          <Route path="/signup" element={<Signup />} />
+          <Route path="/forgot-password" element={<ForgotPassword />} />
         </Routes>
       </BrowserRouter>
     </div>
