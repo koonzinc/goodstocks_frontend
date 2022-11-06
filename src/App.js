@@ -11,6 +11,7 @@ import SocialProof from "./components/SocialProof";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import FrontPage from "./pages/FrontPage";
 import AppHome from './pages/AppHome';
+import AppLogin from "./pages/AppLogin";
 
 
 
@@ -21,6 +22,7 @@ function App() {
         <Routes>
           <Route path="/" element={<FrontPage />} />
           <Route path="/app-home" element={<AppHome />} />
+          <Route path="/app-login" element={<AppLogin />} />
         </Routes>
       </BrowserRouter>
     </div>
