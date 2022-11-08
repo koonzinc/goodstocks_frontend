@@ -1,4 +1,6 @@
 import React from "react";
+import { Link } from "react-router-dom";
+
 
 const Section4_Pricing = () => {
   return (
@@ -113,12 +115,14 @@ const Section4_Pricing = () => {
                 </span>
               </li>
             </ul>
+            <Link to='/signup' replace>
             <a
               href="#"
               class="text-white bg-[#2752FF] hover:bg-primary-700 focus:ring-4 focus:ring-primary-200 font-medium rounded-lg text-sm px-5 py-2.5 text-center "
             >
               Get started
             </a>
+            </Link>
           </div>
           {/* <!-- Pricing Card --> */}
         </div>

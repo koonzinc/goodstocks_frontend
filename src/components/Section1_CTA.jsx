@@ -1,4 +1,7 @@
 import React from "react";
+import { Link } from "react-router-dom";
+
+
 
 const Section1_CTA = () => {
   return (
@@ -114,9 +117,14 @@ const Section1_CTA = () => {
           Sign up now to build your own watchlist & post for free!
         </p>
         <div className="flex justify-center">
-          <a href="#" className="rounded-md bg-[#2752FF] py-2 px-4 text-white ">
-            Sign Up Now
-          </a>
+          <Link to='/signup' replace>
+            <a
+              href="#"
+              className="rounded-md bg-[#2752FF] py-2 px-4 text-white "
+            >
+              Sign Up Now
+            </a>
+          </Link>
         </div>
       </div>
     </section>
