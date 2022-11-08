@@ -14,6 +14,7 @@ import AppHome from './pages/AppHome';
 import Signin from "./pages/Signin";
 import Signup from "./pages/Signup";
 import ForgotPassword from "./pages/ForgotPassword";
+import IndividualStocks from "./pages/IndividualStocks";
 
 
 
@@ -27,6 +28,7 @@ function App() {
           <Route path="/signin" element={<Signin />} />
           <Route path="/signup" element={<Signup />} />
           <Route path="/forgot-password" element={<ForgotPassword />} />
+          <Route path='/stocks' element={<IndividualStocks />}/>
         </Routes>
       </BrowserRouter>
     </div>

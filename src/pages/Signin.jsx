@@ -37,14 +37,13 @@ const AppLogin = () => {
                   />
                 </div>
                 <div>
-                
-                    <label
-                      for="password"
-                      class="block mb-2 text-sm font-medium text-gray-900 "
-                    >
-                      Password
-                    </label>
-   
+                  <label
+                    for="password"
+                    class="block mb-2 text-sm font-medium text-gray-900 "
+                  >
+                    Password
+                  </label>
+
                   <input
                     type="password"
                     name="password"
@@ -72,12 +71,12 @@ const AppLogin = () => {
                     </div>
                   </div>
                   <Link to="/forgot-password" replace>
-                  <a
-                    href="#"
-                    class="text-sm font-medium text-primary-600 hover:underline "
-                  >
-                    Forgot password?
-                  </a>
+                    <a
+                      href="#"
+                      class="text-sm font-medium text-primary-600 hover:underline "
+                    >
+                      Forgot password?
+                    </a>
                   </Link>
                 </div>
                 <button
@@ -88,12 +87,14 @@ const AppLogin = () => {
                 </button>
                 <p class="text-sm font-light text-gray-500 ">
                   Don't have an account yet?{" "}
-                  <a
-                    href="#"
-                    className="font-medium text-primary-600 hover:underline text-[#2752ff]"
-                  >
-                    Sign up
-                  </a>
+                  <Link to="/signup" replace>
+                    <a
+                      href="#"
+                      className="font-medium text-primary-600 hover:underline text-[#2752ff]"
+                    >
+                      Sign up
+                    </a>
+                  </Link>
                 </p>
               </form>
             </div>

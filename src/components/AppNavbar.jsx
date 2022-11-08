@@ -1,5 +1,6 @@
 import React from "react";
-import HistoryEduIcon from '@mui/icons-material/HistoryEdu';
+import HistoryEduIcon from "@mui/icons-material/HistoryEdu";
+import { Link } from "react-router-dom";
 
 const AppNavbar = () => {
   return (
@@ -7,9 +8,11 @@ const AppNavbar = () => {
       <nav className="bg-white border-gray-200 px-4 lg:px-6 py-2.5 ">
         <div className="flex flex-wrap justify-between items-center mx-auto max-w-screen-xl">
           <a className="flex items-center">
-            <span className="self-center text-2xl font-semibold whitespace-nowrap text-[#2752FF] ">
-              goodstocks
-            </span>
+            <Link to="/app-home" replace>
+              <span className="self-center text-2xl font-semibold whitespace-nowrap text-[#2752FF] ">
+                goodstocks
+              </span>
+            </Link>
           </a>
           <div className="flex items-center lg:order-2">
             <a

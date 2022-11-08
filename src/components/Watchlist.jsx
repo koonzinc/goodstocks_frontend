@@ -4,7 +4,7 @@ import AddIcon from '@mui/icons-material/Add';
 
 const Watchlist = () => {
   return (
-    <div className="bg-white px-6 py-4 shadow-2xl rounded-lg w-[300px] ">
+    <div className="bg-white px-6 py-4 shadow-2xl rounded-lg max-h-[530px] md:max-h-[482px]">
       <h1 className="font-semibold">Here is your watchlist.</h1>
       <div className="my-2 flex overflow-scroll gap-4">
           <div className="max-w-[80px] bg-white text-[#2752FF] font-semibold shadow-md py-2 px-3 my-2 flex justify-center rounded-md">
