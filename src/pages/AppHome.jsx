@@ -2,6 +2,7 @@ import React from "react";
 import AppNavbar from "../components/AppNavbar";
 import DataTable from "../components/DataTable";
 import IndicesBar from "../components/IndicesBar";
+import ModalPost from "../components/ModalPost";
 import Post from "../components/Post";
 import StocksBar from "../components/StocksBar";
 import Watchlist from "../components/Watchlist";
@@ -19,6 +20,7 @@ const AppHome = () => {
           <DataTable />
         </div>
       </div>
+      <ModalPost />
     </div>
   );
 };
