@@ -12,7 +12,7 @@ const IndividualStocks = () => {
               <h1 className="font-semibold">$AAPL</h1>
               <button className="bg-[#2752FF] px-4 py-1 rounded-md text-white ">Watch</button>
           </div>
-          <div className="h-96 w-[100%] px-4 py-2">This is a chart</div>
+          <div className="h-96 w-[100%] px-4 py-2 my-2">This is a chart</div>
           <div className="w-[100%] bg-white shadow-xl rounded-lg flex justify-center ">
             <table className="w-[100%]" >
               <thead>

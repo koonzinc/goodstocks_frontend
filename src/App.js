@@ -15,6 +15,7 @@ import Signin from "./pages/Signin";
 import Signup from "./pages/Signup";
 import ForgotPassword from "./pages/ForgotPassword";
 import IndividualStocks from "./pages/IndividualStocks";
+import Profile from "./pages/Profile";
 
 
 
@@ -29,6 +30,7 @@ function App() {
           <Route path="/signup" element={<Signup />} />
           <Route path="/forgot-password" element={<ForgotPassword />} />
           <Route path='/stocks' element={<IndividualStocks />}/>
+          <Route path='/profile' element={<Profile />}/>
         </Routes>
       </BrowserRouter>
     </div>
