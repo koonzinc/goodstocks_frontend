@@ -3,8 +3,9 @@ import Post from "../components/Post";
 import AppNavbar from "../components/AppNavbar";
 import Watchlist from "../components/Watchlist";
 import EditProfile from "../components/EditProfile";
+import ModalPost from "../components/ModalPost";
 
-const Profile = () => {
+const Profile = ({handlePostModal, postModal}) => {
 const [modal, setModal] = useState(false);
 
 
@@ -17,6 +18,7 @@ const handleModal = () => {
       
       <AppNavbar />
       {modal ? <EditProfile modal={modal} handleModal={handleModal} />: null}
+      {postModal ? <ModalPost /> : null}
       <div className="md:gap-4 grid md:grid-cols-4 mx-auto max-w-screen-xl grid-cols-1">
         <div className="flex flex-col md:h-[400px] shadow-2xl rounded-lg ">
           <img
@@ -50,7 +52,7 @@ const handleModal = () => {
             </div>
           </div>
         </div>
-        <Post />
+        <Post handlePostModal={handlePostModal} postModal={postModal} />
         <Watchlist />
       </div>
     </>

@@ -7,20 +7,20 @@ import Post from "../components/Post";
 import StocksBar from "../components/StocksBar";
 import Watchlist from "../components/Watchlist";
 
-const AppHome = () => {
+const AppHome = ({handlePostModal, postModal}) => {
   return (
     <div>
       <AppNavbar />
+      {postModal ? <ModalPost handlePostModal={handlePostModal}  /> : null}
       <StocksBar />
       <IndicesBar />
       <div className="bg-white border-gray-200 px-4 lg:px-6 py-2.5 mt-6">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-4 mx-auto max-w-screen-xl">
           <Watchlist />
-          <Post />
+          <Post handlePostModal={handlePostModal}   />
           <DataTable />
         </div>
       </div>
-      <ModalPost />
     </div>
   );
 };
