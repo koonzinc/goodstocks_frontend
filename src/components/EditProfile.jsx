@@ -1,17 +1,15 @@
 import React, { useState } from "react";
 import CloseIcon from "@mui/icons-material/Close";
 
-const EditProfile = ({handleModal}) => {
-
-  
+const EditProfile = ({ handleModal }) => {
   return (
-    <div className="absolute h-[100vh] w-[100vw] bg-[#242e3697] z-49 ">
+    <div className="absolute h-[100vh] w-[100vw] bg-[#242e3697] z-50 ">
       <div class="absolute bg-transparent p-4 w-full max-w-2xl h-full md:h-auto mx-auto mt-[100px] z-50 left-0 right-0">
         <div class="relative p-4 bg-white rounded-lg shadow dark:bg-gray-800 sm:p-5 ">
-            <div className=" flex justify-end" >
-          <button>
-            <CloseIcon handleModal={handleModal} />
-          </button>
+          <div className=" flex justify-end">
+            <button>
+              <CloseIcon onClick={handleModal} />
+            </button>
           </div>
           <form action="#">
             <div class="grid gap-4 mb-4 sm:grid-cols-2">

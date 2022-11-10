@@ -22,7 +22,7 @@ const handleModal = () => {
       <div className="md:gap-4 grid md:grid-cols-4 mx-auto max-w-screen-xl grid-cols-1">
         <div className="flex flex-col md:h-[400px] shadow-2xl rounded-lg ">
           <img
-            className="rounded-tr-lg rounded-tl-lg -z-10"
+            className="rounded-tr-lg rounded-tl-lg "
             src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQUHWAH7thVcIBNCzQE4jfYH6sZVrtHFcqSFOwN7gZpVQ&s"
             alt=""
           />
