@@ -1,20 +1,65 @@
 import HighchartsReact from "highcharts-react-official";
-import React from "react";
+import React, { useEffect, useState } from "react";
 import AppNavbar from "../components/AppNavbar";
+import axios from "../axios";
+import { useParams } from "react-router-dom";
 
 const IndividualStocks = () => {
+  const [price, setPrice] = useState("");
+  const [close, setClose] = useState([]);
+  const [info, setInfo] = useState({});
+  const [index, setIndex] = useState(0);
+
+  const { stockId } = useParams();
+
+  const url = `https://www.alphavantage.co/query?function=TIME_SERIES_WEEKLY&symbol=AAPL&outputsize=full&apikey=JXG5DBIGA9O2LVMG`;
+  const companyUrl = `https://www.alphavantage.co/query?function=OVERVIEW&symbol=AAPL&apikey=JXG5DBIGA9O2LVMG`;
+
+  useEffect(() => {
+    close.length <= 0 && getPrice();
+    close.length > 0 && setPrice(close[0][1]["4. close"]);
+    close.length <= 0 && getInfo();
+  }, [close]);
+
+  const getPrice = async () => {
+    const response = await axios.get(url);
+    console.log(response.data);
+    const thePrice = response.data["Time Series (Daily)"];
+
+    thePrice && setClose(Object.entries(thePrice));
+    console.log(response.data["Time Series (Daily)"]);
+    console.log(response);
+    setIndex((prev) => prev + 1);
+    console.log(index);
+  };
+
+  const getInfo = async () => {
+    const response = await axios.get(companyUrl);
+    setInfo(response.data);
+  };
+
+  console.log(info);
+  console.log(price);
+  console.log(close);
+
+  const addToWatchlist = () => {
+    axios.post("watchlist-add");
+  };
+
   return (
     <>
       <AppNavbar />
       <div className="bg-white px-4 lg:px-6 py-2.5 mt-6">
         <div className="flex flex-col justify-center items-center mx-auto max-w-screen-xl">
           <div className="flex justify-between w-[100%] px-4 py-4 items-center">
-              <h1 className="font-semibold">$AAPL</h1>
-              <button className="bg-[#2752FF] px-4 py-1 rounded-md text-white ">Watch</button>
+            <h1 className="font-semibold">$AAPL</h1>
+            <button className="bg-[#2752FF] px-4 py-1 rounded-md text-white ">
+              Watch
+            </button>
           </div>
           <div className="h-96 w-[100%] px-4 py-2 my-2">This is a chart</div>
           <div className="w-[100%] bg-white shadow-xl rounded-lg flex justify-center ">
-            <table className="w-[100%]" >
+            <table className="w-[100%]">
               <thead>
                 <tr>
                   <th

@@ -11,11 +11,11 @@ const DataTable = () => {
           <tbody className="divide-y border-b">
             <tr className=" outline-offset-2 text-lg">
               <th className="py-4 px-6 flex">
-                Bitcoin <span className="ml-1 text-gray-500">BTC</span>
+                Apple <span className="ml-1 text-gray-500">AAPL</span>
               </th>
-              <td className="font-bold py-4 px-6">$38,716.43</td>
-              <td className="text-red-500 font-semibold py-4 px-6">-10.82%</td>
-              <td className="py-4 px-6 font-semibold">$729,729,745,340.82</td>
+              <td className="font-bold py-4 px-6">$142.78</td>
+              <td className="text-green-500 font-semibold py-4 px-6">+5.88%</td>
+              <td className="py-4 px-6 font-semibold">$2.27T</td>
               <td className="text-right py-4 px-6">
                 <a
                   href="#"
@@ -27,11 +27,11 @@ const DataTable = () => {
             </tr>
             <tr className=" outline-offset-2 text-lg">
               <th className="py-4 px-6 flex">
-                Bitcoin <span className="ml-1 text-gray-500">BTC</span>
+                Microsoft <span className="ml-1 text-gray-500">MSFT</span>
               </th>
-              <td className="font-bold py-4 px-6">$38,716.43</td>
-              <td className="text-red-500 font-semibold py-4 px-6">-10.82%</td>
-              <td className="py-4 px-6 font-semibold">$729,729,745,340.82</td>
+              <td className="font-bold py-4 px-6">$238.45</td>
+              <td className="text-green-500 font-semibold py-4 px-6">+6.26%</td>
+              <td className="py-4 px-6 font-semibold">$1.78T</td>
               <td className="text-right py-4 px-6">
                 <a
                   href="#"
@@ -43,11 +43,11 @@ const DataTable = () => {
             </tr>
             <tr className=" outline-offset-2 text-lg">
               <th className="py-4 px-6 flex">
-                Bitcoin <span className="ml-1 text-gray-500">BTC</span>
+                Tesla <span className="ml-1 text-gray-500">TSLA</span>
               </th>
-              <td className="font-bold py-4 px-6">$38,716.43</td>
-              <td className="text-red-500 font-semibold py-4 px-6">-10.82%</td>
-              <td className="py-4 px-6 font-semibold">$729,729,745,340.82</td>
+              <td className="font-bold py-4 px-6">$188.42</td>
+              <td className="text-green-500 font-semibold py-4 px-6">+6.35%</td>
+              <td className="py-4 px-6 font-semibold">$591.62B</td>
               <td className="text-right py-4 px-6">
                 <a
                   href="#"
@@ -59,11 +59,11 @@ const DataTable = () => {
             </tr>
             <tr className=" outline-offset-2 text-lg">
               <th className="py-4 px-6 flex">
-                Bitcoin <span className="ml-1 text-gray-500">BTC</span>
+                Amazon <span className="ml-1 text-gray-500">AMZN</span>
               </th>
-              <td className="font-bold py-4 px-6">$38,716.43</td>
-              <td className="text-red-500 font-semibold py-4 px-6">-10.82%</td>
-              <td className="py-4 px-6 font-semibold">$729,729,745,340.82</td>
+              <td className="font-bold py-4 px-6">$96.83</td>
+              <td className="text-green-500 font-semibold py-4 px-6">+12.49%</td>
+              <td className="py-4 px-6 font-semibold">$989.30B</td>
               <td className="text-right py-4 px-6">
                 <a
                   href="#"
@@ -75,11 +75,11 @@ const DataTable = () => {
             </tr>
             <tr className=" outline-offset-2 text-lg border-b">
               <th className="py-4 px-6 flex">
-                Bitcoin <span className="ml-1 text-gray-500">BTC</span>
+                Uber <span className="ml-1 text-gray-500">UBER</span>
               </th>
-              <td className="font-bold py-4 px-6">$38,716.43</td>
-              <td className="text-red-500 font-semibold py-4 px-6">-10.82%</td>
-              <td className="py-4 px-6 font-semibold">$729,729,745,340.82</td>
+              <td className="font-bold py-4 px-6">$28.75</td>
+              <td className="text-green-500 font-semibold py-4 px-6">+8.29%</td>
+              <td className="py-4 px-6 font-semibold">$57.30B</td>
               <td className="text-right py-4 px-6">
                 <a
                   href="#"
