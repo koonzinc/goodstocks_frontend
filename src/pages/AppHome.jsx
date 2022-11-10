@@ -12,7 +12,7 @@ const AppHome = ({postModal, handlePost}) => {
 
   return (
     <div>
-      <AppNavbar handlePost={handlePost} />
+      <AppNavbar postModal={postModal} handlePost={handlePost} />
       {postModal ? <ModalPost postModal={postModal} handlePost={handlePost}   /> : null}
       <StocksBar />
       <IndicesBar />

@@ -16,10 +16,10 @@ const handleModal = () => {
   return (
     <>
       
-      <AppNavbar />
+      <AppNavbar handlePost={handlePost} />
       {modal ? <EditProfile handleModal={handleModal} />: null}
       {postModal ? <ModalPost postModal={postModal} handlePost={handlePost} /> : null}
-      <div className="md:gap-4 grid md:grid-cols-4 mx-auto max-w-screen-xl grid-cols-1">
+      <div className="md:gap-4 grid md:grid-cols-4 mx-auto max-w-screen-xl grid-cols-1 mt-6">
         <div className="flex flex-col md:h-[400px] shadow-2xl rounded-lg ">
           <img
             className="rounded-tr-lg rounded-tl-lg "
@@ -38,10 +38,10 @@ const handleModal = () => {
         
             
           </div>
-          <div className="pl-4 pt-[0px] overflow-auto p">
+          <div className="px-4 mt-[-15px] ">
             <p className="font-semibold">Isaiah Desta</p>
             <p className="text-gray-800">@areandd</p>
-            <p className="text-gray-800 "> Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sequi eum temporibus beatae veniam nesciunt vero distinctio nemo velit modi tempora.</p>
+            <p className="text-gray-800 py-2 text-sm "> Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem, est. Lorem ipsum dolor sit amet.</p>
             <div className="flex ">
               <p>
                 <span className="font-semibold">61</span> Following

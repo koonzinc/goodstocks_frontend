@@ -7,7 +7,7 @@ const Post = ({  postModal, handlePost }) => {
     <>
       <div className="bg-white px-6 py-4 shadow-2xl rounded-lg flex flex-col col-span-2 ">
         {/* Post header */}
-        <div className="bg-[#2752FF] px-4 py-6 flex justify-between items-center rounded-lg text-white shadow-md ">
+        <div className="bg-[#2752FF] px-4 py-6 flex justify-between items-center rounded-lg text-white shadow-xl">
           <h1 className="text-2xl font-semibold">Posts</h1>
           <HistoryEduIcon
             onClick={handlePost}
