@@ -1,17 +1,19 @@
 import React, { useState } from "react";
 import HistoryEduIcon from "@mui/icons-material/HistoryEdu";
-import ModalPost from "./ModalPost";
 
-const Post = ({handlePostModal, postModal}) => {
-  
+
+const Post = ({ handlePost }) => {
   return (
     <>
-      {postModal ? <ModalPost /> : null}
       <div className="bg-white px-6 py-4 shadow-2xl rounded-lg flex flex-col col-span-2 ">
         {/* Post header */}
         <div className="bg-[#2752FF] px-4 py-6 flex justify-between items-center rounded-lg text-white shadow-md ">
           <h1 className="text-2xl font-semibold">Posts</h1>
-          <HistoryEduIcon onClick={handlePostModal} className="cursor-pointer" fontSize="large" />
+          <HistoryEduIcon
+            onClick={handlePost}
+            className="cursor-pointer"
+            fontSize="large"
+          />
         </div>
         {/* Posts container */}
         <div className="bg-white shadow-lg rounded-lg px-4 py-6 mt-6">

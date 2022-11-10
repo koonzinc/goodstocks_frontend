@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import CloseIcon from "@mui/icons-material/Close";
 
-const EditProfile = ({modal, handleModal}) => {
+const EditProfile = () => {
 
   
   return (
@@ -10,7 +10,7 @@ const EditProfile = ({modal, handleModal}) => {
         <div class="relative p-4 bg-white rounded-lg shadow dark:bg-gray-800 sm:p-5 ">
             <div className=" flex justify-end" >
           <button>
-            <CloseIcon onClick={handleModal}/>
+            <CloseIcon />
           </button>
           </div>
           <form action="#">

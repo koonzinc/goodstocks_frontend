@@ -22,13 +22,13 @@ const handleModal = () => {
       <div className="md:gap-4 grid md:grid-cols-4 mx-auto max-w-screen-xl grid-cols-1">
         <div className="flex flex-col md:h-[400px] shadow-2xl rounded-lg ">
           <img
-            className="rounded-tr-lg rounded-tl-lg"
+            className="rounded-tr-lg rounded-tl-lg -z-10"
             src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQUHWAH7thVcIBNCzQE4jfYH6sZVrtHFcqSFOwN7gZpVQ&s"
             alt=""
           />
-          <div className="flex justify-between items-start px-4 pt-2 h-[90px]">
+          <div className="flex justify-between items-start px-4 pt-2 h-[90px] -z-10">
             <img
-              className="w-[100px] h-[100px] rounded-full relative bottom-[60px] border-[4px] border-white z-48"
+              className="w-[100px] h-[100px] rounded-full relative  bottom-[60px] border-[4px] border-white "
               src="https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_1280.png"
               alt=""
             />
