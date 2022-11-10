@@ -2,9 +2,9 @@ import React, { useState } from "react";
 import CloseIcon from "@mui/icons-material/Close";
 import { IconButton } from "@mui/material";
 
-const ModalPost = ({ handlePost }) => {
+const ModalPost = ({ postModal, handlePost }) => {
   return (
-    <div className="absolute z-49 h-full w-full bg-[#242e3697]">
+    <div className="absolute z-40 h-full w-full bg-[#242e3697]">
       <div className="absolute z-50 top-0 left-0 mt-[300px] right-0 flex px-8 py-2 bg-white shadow-xl rounded-lg max-w-fit mx-auto ">
         <div className="px-2 py-1">
           <img

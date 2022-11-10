@@ -5,7 +5,7 @@ import Watchlist from "../components/Watchlist";
 import EditProfile from "../components/EditProfile";
 import ModalPost from "../components/ModalPost";
 
-const Profile = ({handlePostModal, postModal}) => {
+const Profile = ({handlePost, postModal}) => {
 const [modal, setModal] = useState(false);
 
 
@@ -17,8 +17,8 @@ const handleModal = () => {
     <>
       
       <AppNavbar />
-      {modal ? <EditProfile modal={modal} handleModal={handleModal} />: null}
-      {postModal ? <ModalPost /> : null}
+      {modal ? <EditProfile handleModal={handleModal} />: null}
+      {postModal ? <ModalPost postModal={postModal} handlePost={handlePost} /> : null}
       <div className="md:gap-4 grid md:grid-cols-4 mx-auto max-w-screen-xl grid-cols-1">
         <div className="flex flex-col md:h-[400px] shadow-2xl rounded-lg ">
           <img
@@ -26,13 +26,13 @@ const handleModal = () => {
             src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQUHWAH7thVcIBNCzQE4jfYH6sZVrtHFcqSFOwN7gZpVQ&s"
             alt=""
           />
-          <div className="flex justify-between items-start px-4 pt-2 h-[90px] -z-10">
+          <div className="flex justify-between items-start px-4 pt-2 h-[90px] ">
             <img
               className="w-[100px] h-[100px] rounded-full relative  bottom-[60px] border-[4px] border-white "
               src="https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_1280.png"
               alt=""
             />
-            <button onClick={handleModal} className="bg-[#2752ff] text-white px-2.5 py-1 rounded-2xl">
+            <button onClick={handleModal} className="bg-[#2752ff] text-white px-2.5 py-1 rounded-2xl cursor-pointer">
               Edit profile
             </button>
         
@@ -52,7 +52,7 @@ const handleModal = () => {
             </div>
           </div>
         </div>
-        <Post handlePostModal={handlePostModal} postModal={postModal} />
+        <Post handlePost={handlePost} />
         <Watchlist />
       </div>
     </>

@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import HistoryEduIcon from "@mui/icons-material/HistoryEdu";
 
 
-const Post = ({ handlePost }) => {
+const Post = ({  postModal, handlePost }) => {
   return (
     <>
       <div className="bg-white px-6 py-4 shadow-2xl rounded-lg flex flex-col col-span-2 ">

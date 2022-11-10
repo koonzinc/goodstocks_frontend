@@ -7,23 +7,19 @@ import Post from "../components/Post";
 import StocksBar from "../components/StocksBar";
 import Watchlist from "../components/Watchlist";
 
-const AppHome = () => {
-  const [postModal, setPostModal] = useState(false);
-
-  const handlePost = () => {
-    setPostModal(!postModal)
-  }
+const AppHome = ({postModal, handlePost}) => {
+  
 
   return (
     <div>
-      <AppNavbar />
-      {postModal ? <ModalPost handlePost={handlePost}   /> : null}
+      <AppNavbar handlePost={handlePost} />
+      {postModal ? <ModalPost postModal={postModal} handlePost={handlePost}   /> : null}
       <StocksBar />
       <IndicesBar />
       <div className="bg-white border-gray-200 px-4 lg:px-6 py-2.5 mt-6">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-4 mx-auto max-w-screen-xl">
           <Watchlist />
-          <Post handlePost={handlePost} />
+          <Post postModal={postModal} handlePost={handlePost}  />
           <DataTable />
         </div>
       </div>

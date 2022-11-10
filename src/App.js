@@ -21,19 +21,23 @@ import { useState } from "react";
 
 
 function App() {
-  
+  const [postModal, setPostModal] = useState(false)
+
+  const handlePost = () => {
+    setPostModal(!postModal)
+  }
 
   return (
     <div>
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<FrontPage />} />
-          <Route path="/app-home" element={<AppHome    />} />
+          <Route path="/app-home" element={<AppHome postModal={postModal} handlePost={handlePost}    />} />
           <Route path="/signin" element={<Signin />} />
           <Route path="/signup" element={<Signup />} />
           <Route path="/forgot-password" element={<ForgotPassword />} />
           <Route path='/stocks' element={<IndividualStocks />}/>
-          <Route path='/profile' element={<Profile   />}/>
+          <Route path='/profile' element={<Profile postModal={postModal} handlePost={handlePost}   />}/>
         </Routes>
       </BrowserRouter>
     </div>
