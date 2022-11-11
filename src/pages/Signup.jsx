@@ -1,8 +1,32 @@
-import React from "react";
-import { Link } from "react-router-dom";
+import React, { useState } from "react";
+import { Link, useNavigate } from "react-router-dom";
 import Navbar from "../components/FrontPage/Navbar";
+import axios from "../axios";
 
 const AppSignup = () => {
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const [username, setUsername] = useState("");
+  const navigate = useNavigate();
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+
+    axios
+      .post("signup", {
+        email: email,
+        password: password,
+        user_name: username,
+      })
+
+      .then((res) => {
+        console.log("API response: ", res);
+        navigate("/signin");
+      })
+      .catch((err) => {
+        console.log("Error: ", err);
+      });
+  };
   return (
     <>
       <Navbar />
@@ -19,7 +43,11 @@ const AppSignup = () => {
               <h1 class="text-xl font-bold leading-tight tracking-tight text-gray-900 md:text-2xl ">
                 Create an account
               </h1>
-              <form class="space-y-4 md:space-y-6" action="#">
+              <form
+                onSubmit={handleSubmit}
+                class="space-y-4 md:space-y-6"
+                action="#"
+              >
                 <div>
                   <label
                     for="email"
@@ -33,7 +61,25 @@ const AppSignup = () => {
                     id="email"
                     class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5"
                     placeholder="name@company.com"
-                    required=""
+                    required
+                    onChange={(e) => setEmail(e.target.value)}
+                  />
+                </div>
+                <div>
+                  <label
+                    for="username"
+                    class="block mb-2 text-sm font-medium text-gray-900 "
+                  >
+                    Your username
+                  </label>
+                  <input
+                    type="text"
+                    name="username"
+                    id="username"
+                    class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5"
+                    placeholder="username"
+                    required
+                    onChange={(e) => setUsername(e.target.value)}
                   />
                 </div>
                 <div>
@@ -49,7 +95,8 @@ const AppSignup = () => {
                     id="password"
                     placeholder="••••••••"
                     class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 "
-                    required=""
+                    required
+                    onChange={(e) => setPassword(e.target.value)}
                   />
                 </div>
 

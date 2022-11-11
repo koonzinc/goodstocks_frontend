@@ -1,11 +1,11 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const DataTable = () => {
   return (
     <div className="hidden md:grid bg-white px-6 py-4 max-h-[530px] md:max-h-[400px]  items-center rounded-lg shadow-xl">
-      
-        <h1 className="font-semibold text-lg">View good stocks.</h1>
-      
+      <h1 className="font-semibold text-lg">View good stocks.</h1>
+
       <div className="overflow-scroll rounded-md  ">
         <table className="w-[100%] text-left ">
           <tbody className="divide-y border-b">
@@ -17,12 +17,14 @@ const DataTable = () => {
               <td className="text-green-500 font-semibold py-4 px-6">+5.88%</td>
               <td className="py-4 px-6 font-semibold">$2.27T</td>
               <td className="text-right py-4 px-6">
-                <a
-                  href="#"
-                  className="rounded-md bg-[#2752FF] py-2 px-4 text-white"
-                >
-                  Trade
-                </a>
+                <Link to="/stocks/AAPL">
+                  <a
+                    href="#"
+                    className="rounded-md bg-[#2752FF] py-2 px-4 text-white"
+                  >
+                    Trade
+                  </a>
+                </Link>
               </td>
             </tr>
             <tr className=" outline-offset-2 text-lg">
@@ -33,12 +35,14 @@ const DataTable = () => {
               <td className="text-green-500 font-semibold py-4 px-6">+6.26%</td>
               <td className="py-4 px-6 font-semibold">$1.78T</td>
               <td className="text-right py-4 px-6">
-                <a
-                  href="#"
-                  className="rounded-md bg-[#2752FF] py-2 px-4 text-white"
-                >
-                  Trade
-                </a>
+                <Link to="/stocks/MSFT">
+                  <a
+                    href="#"
+                    className="rounded-md bg-[#2752FF] py-2 px-4 text-white"
+                  >
+                    Trade
+                  </a>
+                </Link>
               </td>
             </tr>
             <tr className=" outline-offset-2 text-lg">
@@ -49,12 +53,14 @@ const DataTable = () => {
               <td className="text-green-500 font-semibold py-4 px-6">+6.35%</td>
               <td className="py-4 px-6 font-semibold">$591.62B</td>
               <td className="text-right py-4 px-6">
-                <a
-                  href="#"
-                  className="rounded-md bg-[#2752FF] py-2 px-4 text-white"
-                >
-                  Trade
-                </a>
+                <Link to="/stocks/TSLA">
+                  <a
+                    href="#"
+                    className="rounded-md bg-[#2752FF] py-2 px-4 text-white"
+                  >
+                    Trade
+                  </a>
+                </Link>
               </td>
             </tr>
             <tr className=" outline-offset-2 text-lg">
@@ -62,15 +68,19 @@ const DataTable = () => {
                 Amazon <span className="ml-1 text-gray-500">AMZN</span>
               </th>
               <td className="font-bold py-4 px-6">$96.83</td>
-              <td className="text-green-500 font-semibold py-4 px-6">+12.49%</td>
+              <td className="text-green-500 font-semibold py-4 px-6">
+                +12.49%
+              </td>
               <td className="py-4 px-6 font-semibold">$989.30B</td>
               <td className="text-right py-4 px-6">
-                <a
-                  href="#"
-                  className="rounded-md bg-[#2752FF] py-2 px-4 text-white"
-                >
-                  Trade
-                </a>
+                <Link to="/stocks/AMZN">
+                  <a
+                    href="#"
+                    className="rounded-md bg-[#2752FF] py-2 px-4 text-white"
+                  >
+                    Trade
+                  </a>
+                </Link>
               </td>
             </tr>
             <tr className=" outline-offset-2 text-lg border-b">
@@ -81,12 +91,14 @@ const DataTable = () => {
               <td className="text-green-500 font-semibold py-4 px-6">+8.29%</td>
               <td className="py-4 px-6 font-semibold">$57.30B</td>
               <td className="text-right py-4 px-6">
-                <a
-                  href="#"
-                  className="rounded-md bg-[#2752FF] py-2 px-4 text-white"
-                >
-                  Trade
-                </a>
+                <Link to="/stocks/UBER">
+                  <a
+                    href="#"
+                    className="rounded-md bg-[#2752FF] py-2 px-4 text-white"
+                  >
+                    Trade
+                  </a>
+                </Link>
               </td>
             </tr>
           </tbody>

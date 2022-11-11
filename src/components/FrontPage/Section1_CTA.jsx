@@ -1,8 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-
-
 const Section1_CTA = () => {
   return (
     <section className="bg-white">
@@ -22,92 +20,100 @@ const Section1_CTA = () => {
             <tbody className="divide-y border-b">
               <tr className=" outline-offset-2 text-lg">
                 <th className="py-4 px-6 flex">
-                  Bitcoin <span className="ml-1 text-gray-500">BTC</span>
+                  Microsoft <span className="ml-1 text-gray-500">MSFT</span>
                 </th>
-                <td className="font-bold py-4 px-6">$38,716.43</td>
-                <td className="text-red-500 font-semibold py-4 px-6">
-                  -10.82%
+                <td className="font-bold py-4 px-6">$246.56</td>
+                <td className="text-green-500 font-semibold py-4 px-6">
+                  +1.47%
                 </td>
-                <td className="py-4 px-6 font-semibold">$729,729,745,340.82</td>
+                <td className="py-4 px-6 font-semibold">$1.84T</td>
                 <td className="text-right py-4 px-6">
-                  <a
-                    href="#"
-                    className="rounded-md bg-[#2752FF] py-2 px-4 text-white"
-                  >
-                    Trade
-                  </a>
+                  <Link to="/stocks/MSFT">
+                    <a
+                      href="#"
+                      className="rounded-md bg-[#2752FF] py-2 px-4 text-white"
+                    >
+                      Trade
+                    </a>
+                  </Link>
                 </td>
               </tr>
               <tr className=" outline-offset-2 text-lg">
                 <th className="py-4 px-6 flex">
-                  Bitcoin <span className="ml-1 text-gray-500">BTC</span>
+                  Uber <span className="ml-1 text-gray-500">UBER</span>
                 </th>
-                <td className="font-bold py-4 px-6">$38,716.43</td>
-                <td className="text-red-500 font-semibold py-4 px-6">
-                  -10.82%
-                </td>
-                <td className="py-4 px-6 font-semibold">$729,729,745,340.82</td>
+                <td className="font-bold py-4 px-6">$29.08</td>
+                <td className="text-red-500 font-semibold py-4 px-6">-2.03%</td>
+                <td className="py-4 px-6 font-semibold">$58.02B</td>
                 <td className="text-right py-4 px-6">
-                  <a
-                    href="#"
-                    className="rounded-md bg-[#2752FF] py-2 px-4 text-white"
-                  >
-                    Trade
-                  </a>
+                  <Link to="/stocks/UBER">
+                    <a
+                      href="#"
+                      className="rounded-md bg-[#2752FF] py-2 px-4 text-white"
+                    >
+                      Trade
+                    </a>
+                  </Link>
                 </td>
               </tr>
               <tr className=" outline-offset-2 text-lg">
                 <th className="py-4 px-6 flex">
-                  Bitcoin <span className="ml-1 text-gray-500">BTC</span>
+                  Tesla <span className="ml-1 text-gray-500">TSLA</span>
                 </th>
-                <td className="font-bold py-4 px-6">$38,716.43</td>
-                <td className="text-red-500 font-semibold py-4 px-6">
-                  -10.82%
+                <td className="font-bold py-4 px-6">$194.42</td>
+                <td className="text-green-500 font-semibold py-4 px-6">
+                  +1.95%
                 </td>
-                <td className="py-4 px-6 font-semibold">$729,729,745,340.82</td>
+                <td className="py-4 px-6 font-semibold">$609.28B</td>
                 <td className="text-right py-4 px-6">
-                  <a
-                    href="#"
-                    className="rounded-md bg-[#2752FF] py-2 px-4 text-white"
-                  >
-                    Trade
-                  </a>
+                  <Link to="/stocks/TSLA">
+                    <a
+                      href="#"
+                      className="rounded-md bg-[#2752FF] py-2 px-4 text-white"
+                    >
+                      Trade
+                    </a>
+                  </Link>
                 </td>
               </tr>
               <tr className=" outline-offset-2 text-lg">
                 <th className="py-4 px-6 flex">
-                  Bitcoin <span className="ml-1 text-gray-500">BTC</span>
+                  Apple <span className="ml-1 text-gray-500">AAPL</span>
                 </th>
-                <td className="font-bold py-4 px-6">$38,716.43</td>
-                <td className="text-red-500 font-semibold py-4 px-6">
-                  -10.82%
+                <td className="font-bold py-4 px-6">$149.28</td>
+                <td className="text-green-500 font-semibold py-4 px-6">
+                  +1.62%
                 </td>
-                <td className="py-4 px-6 font-semibold">$729,729,745,340.82</td>
+                <td className="py-4 px-6 font-semibold">$2.37T</td>
                 <td className="text-right py-4 px-6">
-                  <a
-                    href="#"
-                    className="rounded-md bg-[#2752FF] py-2 px-4 text-white"
-                  >
-                    Trade
-                  </a>
+                  <Link to="/stocks/AAPL">
+                    <a
+                      href="#"
+                      className="rounded-md bg-[#2752FF] py-2 px-4 text-white"
+                    >
+                      Trade
+                    </a>
+                  </Link>
                 </td>
               </tr>
               <tr className=" outline-offset-2 text-lg border-b">
                 <th className="py-4 px-6 flex">
-                  Bitcoin <span className="ml-1 text-gray-500">BTC</span>
+                  Amazon <span className="ml-1 text-gray-500">AMZN</span>
                 </th>
-                <td className="font-bold py-4 px-6">$38,716.43</td>
-                <td className="text-red-500 font-semibold py-4 px-6">
-                  -10.82%
+                <td className="font-bold py-4 px-6">$100.62</td>
+                <td className="text-green-500 font-semibold py-4 px-6">
+                  +4.13%
                 </td>
-                <td className="py-4 px-6 font-semibold">$729,729,745,340.82</td>
+                <td className="py-4 px-6 font-semibold">$1.03T</td>
                 <td className="text-right py-4 px-6">
-                  <a
-                    href="#"
-                    className="rounded-md bg-[#2752FF] py-2 px-4 text-white"
-                  >
-                    Trade
-                  </a>
+                  <Link to="/stocks/AMZN">
+                    <a
+                      href="#"
+                      className="rounded-md bg-[#2752FF] py-2 px-4 text-white"
+                    >
+                      Trade
+                    </a>
+                  </Link>
                 </td>
               </tr>
             </tbody>
@@ -117,7 +123,7 @@ const Section1_CTA = () => {
           Sign up now to build your own watchlist & post for free!
         </p>
         <div className="flex justify-center">
-          <Link to='/signup' replace>
+          <Link to="/signup" replace>
             <a
               href="#"
               className="rounded-md bg-[#2752FF] py-2 px-4 text-white "
