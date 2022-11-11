@@ -12,8 +12,8 @@ const IndividualStocks = () => {
 
   const { stockId } = useParams();
 
-  const url = `https://www.alphavantage.co/query?function=TIME_SERIES_WEEKLY&symbol=AAPL&outputsize=full&apikey=JXG5DBIGA9O2LVMG`;
-  const companyUrl = `https://www.alphavantage.co/query?function=OVERVIEW&symbol=AAPL&apikey=JXG5DBIGA9O2LVMG`;
+  const url = `https://www.alphavantage.co/query?function=TIME_SERIES_WEEKLY&symbol=${stockId}&outputsize=full&apikey=XCI1NEPICS3X7H9B`;
+  const companyUrl = `https://www.alphavantage.co/query?function=OVERVIEW&symbol=${stockId}&apikey=XCI1NEPICS3X7H9B`;
 
   useEffect(() => {
     close.length <= 0 && getPrice();
@@ -24,23 +24,17 @@ const IndividualStocks = () => {
   const getPrice = async () => {
     const response = await axios.get(url);
     console.log(response.data);
-    const thePrice = response.data["Time Series (Daily)"];
+    const thePrice = response.data["Weekly Time Series"];
 
     thePrice && setClose(Object.entries(thePrice));
-    console.log(response.data["Time Series (Daily)"]);
-    console.log(response);
+    console.log(response.data["Weekly Time Series"]);
     setIndex((prev) => prev + 1);
-    console.log(index);
   };
 
   const getInfo = async () => {
     const response = await axios.get(companyUrl);
     setInfo(response.data);
   };
-
-  console.log(info);
-  console.log(price);
-  console.log(close);
 
   const addToWatchlist = () => {
     axios.post("watchlist-add");
@@ -52,8 +46,11 @@ const IndividualStocks = () => {
       <div className="bg-white px-4 lg:px-6 py-2.5 mt-6">
         <div className="flex flex-col justify-center items-center mx-auto max-w-screen-xl">
           <div className="flex justify-between w-[100%] px-4 py-4 items-center">
-            <h1 className="font-semibold">$AAPL</h1>
-            <button className="bg-[#2752FF] px-4 py-1 rounded-md text-white ">
+            <h1 className="font-semibold">{stockId}</h1>
+            <button
+              onClick={addToWatchlist}
+              className="bg-[#2752FF] px-4 py-1 rounded-md text-white "
+            >
               Watch
             </button>
           </div>
@@ -76,13 +73,13 @@ const IndividualStocks = () => {
                     Price:
                   </td>
                   <td className="text-[#2752ff]  flex justify-end pr-4 py-2 text-right">
-                    $10
+                    {price && price}
                   </td>
                   <td className="pl-4 py-2 font-semibold text-gray-700">
                     Sector:
                   </td>
                   <td className="text-[#2752ff]  flex justify-end pr-4 py-2 text-right">
-                    Technology
+                    {info && info.Sector}
                   </td>
                 </tr>
                 <tr>
@@ -90,13 +87,13 @@ const IndividualStocks = () => {
                     Industry:
                   </td>
                   <td className="text-[#2752ff]  flex justify-end pr-4 py-2 text-right">
-                    Info Technology
+                    {info && info.Industry}
                   </td>
                   <td className="pl-4 py-2 font-semibold text-gray-700">
                     Market Capitalization:
                   </td>
                   <td className="text-[#2752ff]  flex justify-end pr-4 py-2 text-right">
-                    $106 Billion
+                    {info && info.MarketCapitalization}
                   </td>
                 </tr>
                 <tr>
@@ -104,13 +101,13 @@ const IndividualStocks = () => {
                     Dividend Yield:
                   </td>
                   <td className="text-[#2752ff]  flex justify-end pr-4 py-2 text-right">
-                    1.36%
+                    {info && info.DividendYield}
                   </td>
                   <td className="pl-4 py-2 font-semibold text-gray-700">
                     Earnings Per Share:
                   </td>
                   <td className="text-[#2752ff]  flex justify-end pr-4 py-2 text-right">
-                    0.43
+                    {info && info.EPS}
                   </td>
                 </tr>
                 <tr>
@@ -118,13 +115,13 @@ const IndividualStocks = () => {
                     52 Week High:
                   </td>
                   <td className="text-[#2752ff]  flex justify-end pr-4 py-2 text-right">
-                    $392
+                    {info && info["52WeekHigh"]}
                   </td>
                   <td className="pl-4 py-2 font-semibold text-gray-700">
                     52 Week Low:
                   </td>
                   <td className="text-[#2752ff]  flex justify-end pr-4 py-2 text-right">
-                    $33
+                    {info && info["52WeekLow"]}
                   </td>
                 </tr>
                 <tr>
@@ -132,13 +129,13 @@ const IndividualStocks = () => {
                     Profit Margin:
                   </td>
                   <td className="text-[#2752ff]  flex justify-end pr-4 py-2 text-right">
-                    $2049 Million
+                    {info && info.ProfitMargin}
                   </td>
                   <td className="pl-4 py-2 font-semibold text-gray-700">
                     Operating Margin:
                   </td>
                   <td className="text-[#2752ff]  flex justify-end pr-4 py-2 text-right">
-                    $100 Million
+                    {info && info.OperatingMarginTTM}
                   </td>
                 </tr>
               </tbody>
