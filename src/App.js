@@ -7,7 +7,7 @@ import ForgotPassword from "./pages/ForgotPassword";
 import IndividualStocks from "./pages/IndividualStocks";
 import Profile from "./pages/Profile";
 import { useEffect, useState } from "react";
-import axios from "axios";
+import axios from "./axios";
 
 function App() {
   const [postModal, setPostModal] = useState(false);
@@ -24,6 +24,13 @@ function App() {
         setUserId(res.data.loggedInAs);
         console.log(userId);
       });
+    axios
+      .get("watchlist", { headers: { Authorization: `Bearer ${token}` } })
+      .then((response) => {
+        console.log(response.data);
+        setWatchlistData(response.data);
+      })
+      .catch((error) => console.log(error));
   }, []);
 
   const handlePost = () => {
@@ -37,7 +44,14 @@ function App() {
           <Route path="/" element={<FrontPage />} />
           <Route
             path="/app-home"
-            element={<AppHome postModal={postModal} handlePost={handlePost} />}
+            element={
+              <AppHome
+                postModal={postModal}
+                handlePost={handlePost}
+                watchlistData={watchlistData}
+                userId={userId}
+              />
+            }
           />
           <Route path="/signin" element={<Signin />} />
           <Route path="/signup" element={<Signup />} />

@@ -2,7 +2,7 @@ import React from "react";
 import CancelPresentationIcon from "@mui/icons-material/CancelPresentation";
 import AddIcon from "@mui/icons-material/Add";
 
-const Watchlist = () => {
+const Watchlist = ({ watchlistData, userId }) => {
   return (
     <div className="bg-white px-6 py-4 shadow-2xl rounded-lg max-h-[530px] md:max-h-[482px]">
       <h1 className="font-semibold">Here is your watchlist.</h1>
@@ -28,41 +28,14 @@ const Watchlist = () => {
           <AddIcon style={{ fontSize: "14px" }} />
         </div>
       </div>
-      <div className="flex justify-between items-center my-3 bg-[#2752FF] text-white px-3 py-2 rounded-md shadow-lg">
-        <div>
-          <a className="font-semibold text-[18px]">$TSLA</a>
-          <p className="text-[10px]">Tesla Inc.</p>
+      {watchlistData.map((stock, i) => (
+        <div className="flex justify-between items-center my-3 bg-[#2752FF] text-white px-3 py-2 rounded-md shadow-lg">
+          <div>
+            <a className="font-semibold text-[18px]">${stock.stock}</a>
+          </div>
+          <CancelPresentationIcon fontSize="medium" />
         </div>
-        <CancelPresentationIcon fontSize="large" />
-      </div>
-      <div className="flex justify-between items-center my-3 bg-[#2752FF] text-white px-3 py-2 rounded-md shadow-lg">
-        <div>
-          <a className="font-semibold text-[18px]">$TSLA</a>
-          <p className="text-[10px]">Tesla Inc.</p>
-        </div>
-        <CancelPresentationIcon fontSize="large" />
-      </div>
-      <div className="flex justify-between items-center my-3 bg-[#2752FF] text-white px-3 py-2 rounded-md shadow-lg">
-        <div>
-          <a className="font-semibold text-[18px]">$TSLA</a>
-          <p className="text-[10px]">Tesla Inc.</p>
-        </div>
-        <CancelPresentationIcon fontSize="large" />
-      </div>
-      <div className="flex justify-between items-center my-3 bg-[#2752FF] text-white px-3 py-2 rounded-md shadow-lg">
-        <div>
-          <a className="font-semibold text-[18px]">$TSLA</a>
-          <p className="text-[10px]">Tesla Inc.</p>
-        </div>
-        <CancelPresentationIcon fontSize="large" />
-      </div>
-      <div className="flex justify-between items-center my-3 bg-[#2752FF] text-white px-3 py-2 rounded-md shadow-lg">
-        <div>
-          <a className="font-semibold text-[18px]">$TSLA</a>
-          <p className="text-[10px]">Tesla Inc.</p>
-        </div>
-        <CancelPresentationIcon fontSize="large" />
-      </div>
+      ))}
     </div>
   );
 };
