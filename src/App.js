@@ -58,7 +58,7 @@ function App() {
           <Route path="/forgot-password" element={<ForgotPassword />} />
           <Route path="/stocks/:stockId" element={<IndividualStocks />} />
           <Route
-            path="/profile"
+            path="/profile/:userName"
             element={<Profile postModal={postModal} handlePost={handlePost} />}
           />
         </Routes>
