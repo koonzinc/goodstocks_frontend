@@ -6,10 +6,25 @@ import Signup from "./pages/Signup";
 import ForgotPassword from "./pages/ForgotPassword";
 import IndividualStocks from "./pages/IndividualStocks";
 import Profile from "./pages/Profile";
-import { useState } from "react";
+import { useEffect, useState } from "react";
+import axios from "axios";
 
 function App() {
   const [postModal, setPostModal] = useState(false);
+  const [userId, setUserId] = useState(-1);
+  const [watchlistData, setWatchlistData] = useState([]);
+
+  useEffect(() => {
+    let token = localStorage.getItem("userToken");
+    axios
+      .get("validate-token", {
+        headers: { Authorization: `Bearer ${token}` },
+      })
+      .then((res) => {
+        setUserId(res.data.loggedInAs);
+        console.log(userId);
+      });
+  }, []);
 
   const handlePost = () => {
     setPostModal(!postModal);
