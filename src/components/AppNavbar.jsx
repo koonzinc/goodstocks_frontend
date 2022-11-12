@@ -66,20 +66,20 @@ const AppNavbar = ({ postModal, handlePost }) => {
             </button>
           </div>
           <div
-            className="hidden justify-between items-center w-full lg:flex lg:w-auto lg:order-1"
+            className="justify-between items-center w-full lg:flex lg:w-auto lg:order-1"
             id="mobile-menu-2"
           >
             <ul className="flex flex-col mt-4 font-medium lg:flex-row lg:space-x-8 lg:mt-0">
-              <Link to='/app-home'>
-              <li>
-                <a
-                  href="#"
-                  className="block py-2 pr-4 pl-3 text-gray-700 rounded bg-primary-700 lg:bg-transparent lg:text-primary-700 lg:p-0 "
-                  aria-current={"page"}
-                >
-                  Home
-                </a>
-              </li>
+              <Link to="/app-home">
+                <li>
+                  <a
+                    href="#"
+                    className="block py-2 pr-4 pl-3 text-gray-700 rounded bg-primary-700 lg:bg-transparent lg:text-primary-700 lg:p-0 "
+                    aria-current={"page"}
+                  >
+                    Home
+                  </a>
+                </li>
               </Link>
               <li>
                 <a
