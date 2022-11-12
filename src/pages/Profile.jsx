@@ -7,7 +7,7 @@ import ModalPost from "../components/ModalPost";
 import { useParams } from "react-router-dom";
 import axios from "../axios";
 
-const Profile = ({ handlePost, postModal }) => {
+const Profile = ({ handlePost, postModal, watchlistData, userId }) => {
   const [modal, setModal] = useState(false);
   const [userInfo, setUserInfo] = useState({});
   const { userName } = useParams();
@@ -71,7 +71,7 @@ const Profile = ({ handlePost, postModal }) => {
           </div>
         </div>
         <Post handlePost={handlePost} />
-        <Watchlist />
+        <Watchlist watchlistData={watchlistData} userId={userId} />
       </div>
     </>
   );

@@ -59,7 +59,14 @@ function App() {
           <Route path="/stocks/:stockId" element={<IndividualStocks />} />
           <Route
             path="/profile/:userName"
-            element={<Profile postModal={postModal} handlePost={handlePost} />}
+            element={
+              <Profile
+                postModal={postModal}
+                handlePost={handlePost}
+                watchlistData={watchlistData}
+                userId={userId}
+              />
+            }
           />
         </Routes>
       </BrowserRouter>
