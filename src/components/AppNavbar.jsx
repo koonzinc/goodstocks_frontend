@@ -35,12 +35,13 @@ const AppNavbar = ({ postModal, handlePost }) => {
               data-collapse-toggle="mobile-menu-2"
               type="button"
               className="inline-flex items-center p-2 ml-1 text-sm text-gray-500 rounded-lg lg:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 "
-              aria-controls={"mobile-menu-2"}
-              aria-expanded={"false"}
+              aria-controls="navbar-default"
+              aria-expanded="false"
             >
               <span className="sr-only">Open main menu</span>
               <svg
                 className="w-6 h-6"
+                aria-hidden="true"
                 fill="currentColor"
                 viewBox="0 0 20 20"
                 xmlns="http://www.w3.org/2000/svg"
@@ -66,8 +67,8 @@ const AppNavbar = ({ postModal, handlePost }) => {
             </button>
           </div>
           <div
-            className="justify-between items-center w-full lg:flex lg:w-auto lg:order-1"
-            id="mobile-menu-2"
+            className="hidden justify-between items-center w-full lg:flex lg:w-auto lg:order-1"
+            id="navbar-default"
           >
             <ul className="flex flex-col mt-4 font-medium lg:flex-row lg:space-x-8 lg:mt-0">
               <Link to="/app-home">
