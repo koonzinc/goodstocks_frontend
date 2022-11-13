@@ -7,7 +7,7 @@ import ModalPost from "../components/ModalPost";
 import { useParams } from "react-router-dom";
 import axios from "../axios";
 
-const Profile = ({ handlePost, postModal, watchlistData, userId }) => {
+const Profile = ({ handlePost, postModal, watchlistData, userId, postData }) => {
   const [modal, setModal] = useState(false);
   const [userInfo, setUserInfo] = useState({});
   const { userName } = useParams();
@@ -30,7 +30,7 @@ const Profile = ({ handlePost, postModal, watchlistData, userId }) => {
       <AppNavbar handlePost={handlePost} />
       {modal ? <EditProfile handleModal={handleModal} /> : null}
       {postModal ? (
-        <ModalPost postModal={postModal} handlePost={handlePost} />
+        <ModalPost postData={postData} userId={userId} postModal={postModal} handlePost={handlePost} />
       ) : null}
       <div className="md:gap-4 grid md:grid-cols-4 mx-auto max-w-screen-xl grid-cols-1 mt-6">
         <div className="flex flex-col md:h-[400px] shadow-2xl rounded-lg ">
@@ -70,7 +70,7 @@ const Profile = ({ handlePost, postModal, watchlistData, userId }) => {
             </div>
           </div>
         </div>
-        <Post handlePost={handlePost} />
+        <Post postData={postData} userId={userId} handlePost={handlePost} />
         <Watchlist watchlistData={watchlistData} userId={userId} />
       </div>
     </>

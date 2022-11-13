@@ -13,6 +13,7 @@ function App() {
   const [postModal, setPostModal] = useState(false);
   const [userId, setUserId] = useState(-1);
   const [watchlistData, setWatchlistData] = useState([]);
+  const [postData, setPostData] = useState([]);
 
   useEffect(() => {
     let token = localStorage.getItem("userToken");
@@ -37,7 +38,13 @@ function App() {
       })
       .catch((error) => console.log(error));
 
-    
+    axios
+      .get("posts", { headers: { Authorization: `Bearer ${token}` } })
+      .then((response) => {
+        console.log(response.data);
+        setPostData(response.data)
+      })
+      .catch((error) => console.log(error));
   }, []);
 
   const handlePost = () => {
@@ -57,13 +64,17 @@ function App() {
                 handlePost={handlePost}
                 watchlistData={watchlistData}
                 userId={userId}
+                postData={postData}
               />
             }
           />
           <Route path="/signin" element={<Signin />} />
           <Route path="/signup" element={<Signup />} />
           <Route path="/forgot-password" element={<ForgotPassword />} />
-          <Route path="/stocks/:stockId" element={<IndividualStocks userId={userId} />} />
+          <Route
+            path="/stocks/:stockId"
+            element={<IndividualStocks userId={userId} />}
+          />
           <Route
             path="/profile/:userName"
             element={
@@ -72,6 +83,7 @@ function App() {
                 handlePost={handlePost}
                 watchlistData={watchlistData}
                 userId={userId}
+                postData={postData}
               />
             }
           />
