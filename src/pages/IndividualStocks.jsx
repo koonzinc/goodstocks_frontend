@@ -4,7 +4,7 @@ import AppNavbar from "../components/AppNavbar";
 import axios from "../axios";
 import { useParams } from "react-router-dom";
 
-const IndividualStocks = () => {
+const IndividualStocks = ({ userId }) => {
   const [price, setPrice] = useState("");
   const [close, setClose] = useState([]);
   const [info, setInfo] = useState({});
@@ -35,9 +35,17 @@ const IndividualStocks = () => {
     const response = await axios.get(companyUrl);
     setInfo(response.data);
   };
-
+  
   const addToWatchlist = () => {
-    axios.post("watchlist-add");
+    let token = localStorage.getItem("userToken");
+    axios.post(
+      "watchlist-add",
+      {
+        user_id: userId,
+        stock: stockId,
+      },
+      { headers: { Authorization: `Bearer ${token}` } }
+    );
   };
 
   return (
