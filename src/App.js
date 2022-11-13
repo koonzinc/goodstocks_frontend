@@ -24,6 +24,11 @@ function App() {
         setUserId(res.data.loggedInAs);
         console.log(userId);
       });
+  }, [userId]);
+
+  useEffect(() => {
+    let token = localStorage.getItem("userToken");
+
     axios
       .get("watchlist", { headers: { Authorization: `Bearer ${token}` } })
       .then((response) => {
@@ -31,6 +36,8 @@ function App() {
         setWatchlistData(response.data);
       })
       .catch((error) => console.log(error));
+
+    
   }, []);
 
   const handlePost = () => {
