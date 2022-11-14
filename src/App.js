@@ -14,6 +14,15 @@ function App() {
   const [userId, setUserId] = useState(-1);
   const [watchlistData, setWatchlistData] = useState([]);
   const [postData, setPostData] = useState([]);
+  const [signIn, setSignIn] = useState(false);
+  let token = localStorage.getItem("userToken");
+
+  useEffect(() => {
+    if (token) {
+      setSignIn(!signIn);
+      console.log(signIn);
+    }
+  }, [token]);
 
   useEffect(() => {
     let token = localStorage.getItem("userToken");
@@ -42,7 +51,7 @@ function App() {
       .get("posts", { headers: { Authorization: `Bearer ${token}` } })
       .then((response) => {
         console.log(response.data);
-        setPostData(response.data)
+        setPostData(response.data);
       })
       .catch((error) => console.log(error));
   }, []);

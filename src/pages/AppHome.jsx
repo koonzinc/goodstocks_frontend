@@ -7,19 +7,42 @@ import Post from "../components/Post";
 import StocksBar from "../components/StocksBar";
 import Watchlist from "../components/Watchlist";
 
-const AppHome = ({ postModal, handlePost, watchlistData, userId, postData }) => {
+const AppHome = ({
+  postModal,
+  handlePost,
+  watchlistData,
+  userId,
+  postData,
+  signIn,
+}) => {
   return (
     <div>
-      <AppNavbar postModal={postModal} handlePost={handlePost} />
+      <AppNavbar
+        postModal={postModal}
+        handlePost={handlePost}
+        signIn={signIn}
+      />
       {postModal ? (
-        <ModalPost userId={userId} postModal={postModal} handlePost={handlePost} />
+        <ModalPost
+          userId={userId}
+          postModal={postModal}
+          handlePost={handlePost}
+        />
       ) : null}
       <StocksBar />
       <IndicesBar />
       <div className="bg-white border-gray-200 px-4 lg:px-6 py-2.5 mt-6">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-4 mx-auto max-w-screen-xl">
-          <Watchlist watchlistData={watchlistData} userId={userId} />
-          <Post postData={postData} postModal={postModal} handlePost={handlePost} />
+          <Watchlist
+            watchlistData={watchlistData}
+            userId={userId}
+            signIn={signIn}
+          />
+          <Post
+            postData={postData}
+            postModal={postModal}
+            handlePost={handlePost}
+          />
           <DataTable />
         </div>
       </div>
