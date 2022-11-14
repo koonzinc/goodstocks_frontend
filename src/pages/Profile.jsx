@@ -24,10 +24,12 @@ const Profile = ({
         headers: { "Access-Control-Allow-Origin": "*" },
       })
       .then((res) => {
-        setUserInfo(res);
+        setUserInfo(res.data);
         console.log(userInfo);
       })
       .catch((err) => console.log(err));
+
+   
   }, []);
 
   const handleModal = () => {
@@ -50,13 +52,13 @@ const Profile = ({
         <div className="flex flex-col md:h-[400px] shadow-2xl rounded-lg ">
           <img
             className="rounded-tr-lg rounded-tl-lg "
-            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQUHWAH7thVcIBNCzQE4jfYH6sZVrtHFcqSFOwN7gZpVQ&s"
+            src={userInfo.banner}
             alt=""
           />
           <div className="flex justify-between items-start px-4 pt-2 h-[90px] ">
             <img
               className="w-[100px] h-[100px] rounded-full relative  bottom-[60px] border-[4px] border-white "
-              src="https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_1280.png"
+              src={userInfo.profile_photo}
               alt=""
             />
             <button
@@ -67,12 +69,10 @@ const Profile = ({
             </button>
           </div>
           <div className="px-4 mt-[-15px] ">
-            <p className="font-semibold">Isaiah Desta</p>
-            <p className="text-gray-800">@areandd</p>
+            <p className="font-semibold">{userInfo.name}</p>
+            <p className="text-gray-800">{`@${userInfo.user_name}`}</p>
             <p className="text-gray-800 py-2 text-sm ">
-              {" "}
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem,
-              est. Lorem ipsum dolor sit amet.
+              {userInfo.bio}
             </p>
             <div className="flex ">
               <p>
