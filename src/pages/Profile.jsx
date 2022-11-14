@@ -7,7 +7,13 @@ import ModalPost from "../components/ModalPost";
 import { useParams } from "react-router-dom";
 import axios from "../axios";
 
-const Profile = ({ handlePost, postModal, watchlistData, userId, postData }) => {
+const Profile = ({
+  handlePost,
+  postModal,
+  watchlistData,
+  userId,
+  postData,
+}) => {
   const [modal, setModal] = useState(false);
   const [userInfo, setUserInfo] = useState({});
   const { userName } = useParams();
@@ -17,7 +23,10 @@ const Profile = ({ handlePost, postModal, watchlistData, userId, postData }) => 
       .get("user-profile?key=" + userName, {
         headers: { "Access-Control-Allow-Origin": "*" },
       })
-      .then((res) => setUserInfo(res.data))
+      .then((res) => {
+        setUserInfo(res);
+        console.log(userInfo);
+      })
       .catch((err) => console.log(err));
   }, []);
 
@@ -30,7 +39,12 @@ const Profile = ({ handlePost, postModal, watchlistData, userId, postData }) => 
       <AppNavbar handlePost={handlePost} />
       {modal ? <EditProfile handleModal={handleModal} /> : null}
       {postModal ? (
-        <ModalPost postData={postData} userId={userId} postModal={postModal} handlePost={handlePost} />
+        <ModalPost
+          postData={postData}
+          userId={userId}
+          postModal={postModal}
+          handlePost={handlePost}
+        />
       ) : null}
       <div className="md:gap-4 grid md:grid-cols-4 mx-auto max-w-screen-xl grid-cols-1 mt-6">
         <div className="flex flex-col md:h-[400px] shadow-2xl rounded-lg ">

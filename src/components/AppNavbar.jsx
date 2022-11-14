@@ -1,8 +1,20 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import HistoryEduIcon from "@mui/icons-material/HistoryEdu";
 import { Link } from "react-router-dom";
+import axios from "axios";
 
 const AppNavbar = ({ postModal, handlePost }) => {
+  const [username, setUsername] = useState("");
+
+  useEffect(() => {
+    let token = localStorage.getItem("userToken");
+
+    axios
+      .get("validate-token", { headers: { Authorization: `Bearer ${token}` } })
+      .then((res) => setUsername(res.data.user_name))
+      .catch((err) => console.log(err));
+  }, [username]);
+
   return (
     <header>
       <nav className="bg-white border-gray-200 px-4 lg:px-6 py-2.5 ">
@@ -90,7 +102,7 @@ const AppNavbar = ({ postModal, handlePost }) => {
                   Stocks
                 </a>
               </li>
-              <Link to="/profile">
+              <Link to={`/profile/${username}`}>
                 <li>
                   <a
                     href="#"
