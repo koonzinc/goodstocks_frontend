@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import HistoryEduIcon from "@mui/icons-material/HistoryEdu";
 import { Link } from "react-router-dom";
-import axios from "axios";
+import axios from "../axios";
 
 const AppNavbar = ({ postModal, handlePost }) => {
   const [username, setUsername] = useState("");
@@ -11,7 +11,10 @@ const AppNavbar = ({ postModal, handlePost }) => {
 
     axios
       .get("validate-token", { headers: { Authorization: `Bearer ${token}` } })
-      .then((res) => setUsername(res.data.user_name))
+      .then((res) => {
+        console.log(res.data.user_name);
+        setUsername(res.data.user_name);
+      })
       .catch((err) => console.log(err));
   }, [username]);
 
