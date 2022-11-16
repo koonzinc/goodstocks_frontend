@@ -72,10 +72,10 @@ const Profile = ({
             <p className="text-gray-800 py-2 text-sm ">{userInfo.bio}</p>
             <div className="flex ">
               <p>
-                <span className="font-semibold">0</span> Following
+                <span className="font-semibold">124</span> Following
               </p>
               <p>
-                <span className="font-semibold ml-3">7.9 B</span> Followers
+                <span className="font-semibold ml-3">326</span> Followers
               </p>
             </div>
           </div>

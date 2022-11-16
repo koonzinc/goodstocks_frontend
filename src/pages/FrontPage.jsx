@@ -9,19 +9,19 @@ import Section4_Pricing from "../components/FrontPage/Section4_Pricing";
 import Section5_Team from "../components/FrontPage/Section5_Team";
 import Section6_CTA from "../components/FrontPage/Section6_CTA";
 import SocialProof from "../components/FrontPage/SocialProof";
-
+import willpic from "../assets/willpic";
 
 const FrontPage = () => {
   return (
     <div>
       <Navbar />
-      <Hero  />
+      <Hero />
       <SocialProof />
       <Section1_CTA />
       <Section2_Features />
       <Section3_Testimonial />
       <Section4_Pricing />
-      <Section5_Team />
+      <Section5_Team willpic={willpic} />
       <Section6_CTA />
       <Footer />
     </div>

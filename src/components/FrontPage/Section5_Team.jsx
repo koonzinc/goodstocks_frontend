@@ -1,6 +1,7 @@
 import React from "react";
+import willpic from "../../assets/willpic";
 
-const Section5_Team = () => {
+const Section5_Team = ({ willpic }) => {
   return (
     <section id="team_section" class="bg-white ">
       <div class="py-8 px-4 mx-auto max-w-screen-xl lg:py-16 lg:px-6 ">
@@ -18,8 +19,8 @@ const Section5_Team = () => {
             <a href="#">
               <img
                 class="w-full rounded-lg sm:rounded-none sm:rounded-l-lg"
-                src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/avatars/bonnie-green.png"
-                alt="Bonnie Avatar"
+                src={willpic}
+                alt=""
               />
             </a>
             <div class="p-5">
@@ -99,7 +100,7 @@ const Section5_Team = () => {
             <a href="#">
               <img
                 class="w-full rounded-lg sm:rounded-none sm:rounded-l-lg"
-                src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/avatars/jese-leos.png"
+                src="https://github.com/account"
                 alt="Jese Avatar"
               />
             </a>
