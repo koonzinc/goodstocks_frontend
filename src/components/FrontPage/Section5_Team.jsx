@@ -2,7 +2,7 @@ import React from "react";
 
 const Section5_Team = () => {
   return (
-    <section class="bg-white ">
+    <section id="team_section" class="bg-white ">
       <div class="py-8 px-4 mx-auto max-w-screen-xl lg:py-16 lg:px-6 ">
         <div class="mx-auto max-w-screen-sm text-center mb-8 lg:mb-16">
           <h2 class="mb-4 text-4xl tracking-tight font-extrabold text-gray-900 ">

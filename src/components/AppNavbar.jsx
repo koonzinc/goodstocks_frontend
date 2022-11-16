@@ -3,8 +3,17 @@ import HistoryEduIcon from "@mui/icons-material/HistoryEdu";
 import { Link } from "react-router-dom";
 import axios from "../axios";
 
-const AppNavbar = ({ postModal, handlePost, signIn }) => {
+const AppNavbar = ({ postModal, handlePost }) => {
   const [username, setUsername] = useState("");
+  const [signIn, setSignIn] = useState(false);
+  let token = localStorage.getItem("userToken");
+
+  useEffect(() => {
+    if (token) {
+      setSignIn(!signIn);
+      console.log(signIn);
+    }
+  }, [token]);
 
   useEffect(() => {
     let token = localStorage.getItem("userToken");
@@ -17,6 +26,10 @@ const AppNavbar = ({ postModal, handlePost, signIn }) => {
       })
       .catch((err) => console.log(err));
   }, [username]);
+
+  const handleSignout = () => {
+    localStorage.removeItem("userToken");
+  };
 
   return (
     <header>
@@ -31,15 +44,15 @@ const AppNavbar = ({ postModal, handlePost, signIn }) => {
               </Link>
             </a>
             <div className="flex items-center lg:order-2">
-              <Link to="/profile">
+              <Link to={`/profile/${username}`} replace>
                 <a
                   href="#"
-                  className="text-gray-800  hover:bg-gray-50 focus:ring-4 focus:ring-gray-300 font-medium rounded-lg text-sm px-4 lg:px-5 py-2 lg:py-2.5 mr-2  focus:outline-none "
+                  className="text-gray-700 hover:bg-primary-800 focus:ring-4 focus:ring-primary-300 font-medium rounded-lg text-sm px-4 lg:px-5 py-2 lg:py-2.5 mr-2 focus:outline-none "
                 >
                   Profile
                 </a>
               </Link>
-              <Link to="/">
+              <Link onClick={handleSignout} to="/">
                 <a
                   href="#"
                   className="text-white bg-[#2752FF] hover:bg-primary-800 focus:ring-4 focus:ring-primary-300 font-medium rounded-lg text-sm px-4 lg:px-5 py-2 lg:py-2.5 mr-2 focus:outline-none "
@@ -98,24 +111,17 @@ const AppNavbar = ({ postModal, handlePost, signIn }) => {
                     </a>
                   </li>
                 </Link>
-                <li>
-                  <a
-                    href="#"
-                    className="block py-2 pr-4 pl-3 text-gray-700 border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 lg:hover:text-primary-700 lg:p-0     "
-                  >
-                    Stocks
-                  </a>
-                </li>
-                <Link to={`/profile/${username}`}>
+                <Link to="/stocks/TSLA">
                   <li>
                     <a
                       href="#"
                       className="block py-2 pr-4 pl-3 text-gray-700 border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 lg:hover:text-primary-700 lg:p-0     "
                     >
-                      Profile
+                      Stocks
                     </a>
                   </li>
                 </Link>
+
                 <li
                   onClick={handlePost}
                   className="flex text-gray-700 cursor-pointer"
@@ -210,6 +216,7 @@ const AppNavbar = ({ postModal, handlePost, signIn }) => {
                     </a>
                   </li>
                 </Link>
+                <Link to='/stocks/TSLA'>
                 <li>
                   <a
                     href="#"
@@ -218,16 +225,8 @@ const AppNavbar = ({ postModal, handlePost, signIn }) => {
                     Stocks
                   </a>
                 </li>
-                <Link to={`/profile/${username}`}>
-                  <li>
-                    <a
-                      href="#"
-                      className="block py-2 pr-4 pl-3 text-gray-700 border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 lg:hover:text-primary-700 lg:p-0     "
-                    >
-                      Profile
-                    </a>
-                  </li>
                 </Link>
+
                 <li
                   onClick={handlePost}
                   className="flex text-gray-700 cursor-pointer"

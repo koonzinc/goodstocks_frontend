@@ -15,7 +15,7 @@ const FrontPage = () => {
   return (
     <div>
       <Navbar />
-      <Hero />
+      <Hero  />
       <SocialProof />
       <Section1_CTA />
       <Section2_Features />
