@@ -1,7 +1,7 @@
 import React from "react";
-import willpic from "../../assets/willpic";
+import Image1 from "../../assets/willpic.PNG";
 
-const Section5_Team = ({ willpic }) => {
+const Section5_Team = () => {
   return (
     <section id="team_section" class="bg-white ">
       <div class="py-8 px-4 mx-auto max-w-screen-xl lg:py-16 lg:px-6 ">
@@ -17,11 +17,13 @@ const Section5_Team = ({ willpic }) => {
         <div class="grid gap-8 mb-6 lg:mb-16 md:grid-cols-2">
           <div class="items-center bg-gray-50 rounded-lg shadow sm:flex ">
             <a href="#">
-              <img
-                class="w-full rounded-lg sm:rounded-none sm:rounded-l-lg"
-                src={willpic}
-                alt=""
-              />
+              <div className="w-[205.7px] h-[205.7px]">
+                <img
+                  class="w-full h-full rounded-lg sm:rounded-none sm:rounded-l-lg object-cover"
+                  src={Image1}
+                  alt=""
+                />
+              </div>
             </a>
             <div class="p-5">
               <h3 class="text-xl font-bold tracking-tight text-gray-900 ">
