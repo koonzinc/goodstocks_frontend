@@ -13,8 +13,12 @@ const IndividualStocks = ({ userId }) => {
 
   const { stockId } = useParams();
 
-  const url = `https://www.alphavantage.co/query?function=TIME_SERIES_WEEKLY&symbol=${stockId}&outputsize=full&apikey=XCI1NEPICS3X7H9B`;
-  const companyUrl = `https://www.alphavantage.co/query?function=OVERVIEW&symbol=${stockId}&apikey=XCI1NEPICS3X7H9B`;
+  const url = `https://www.alphavantage.co/query?function=TIME_SERIES_WEEKLY&symbol=${stockId}&outputsize=full&apikey=${JSON.stringify(
+    process.env.REACT_APP_API_KEY
+  )}`;
+  const companyUrl = `https://www.alphavantage.co/query?function=OVERVIEW&symbol=${stockId}&apikey=${JSON.stringify(
+    process.env.REACT_APP_API_KEY
+  )}`;
 
   useEffect(() => {
     close.length <= 0 && getPrice();
